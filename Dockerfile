@@ -39,7 +39,7 @@ RUN chmod +x /usr/local/bin/intellij && \
     chown developer:developer -R /home/developer/.IdeaIC2016.1
 
 RUN echo 'Downloading IntelliJ IDEA' && \
-    wget https://download-cf.jetbrains.com/idea/ideaIC-2016.1.3.tar.gz -O /tmp/intellij.tar.gz -q && \
+    wget https://download.jetbrains.com/idea/ideaIU-2016.2.tar.gz -O /tmp/intellij.tar.gz -q && \
     echo 'Installing IntelliJ IDEA' && \
     mkdir -p /opt/intellij && \
     tar -xf /tmp/intellij.tar.gz --strip-components=1 -C /opt/intellij && \
