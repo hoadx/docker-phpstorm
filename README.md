@@ -1,10 +1,11 @@
-# Docker image for IntelliJ IDEA Community, Go and Go plugin
+# Docker image for IntelliJ IDEA Ultimate, Go and Go plugin
 
-[![Circle CI](https://circleci.com/gh/dlsniper/docker-intellij.svg?style=svg)](https://circleci.com/gh/dlsniper/docker-intellij)
+[![CircleCI](https://circleci.com/gh/jamesmstone/docker-intellij.svg?style=svg)](https://circleci.com/gh/jamesmstone/docker-intellij)
+**Note:** This is a for from the original: dlsniper/[docker-intellij](https://github.com/dlsniper/docker-intellij). I made this fork as I was after a version that used the ultimate edition.
 
 The image contains the following software:
 
-- [IntelliJ IDEA Community 2016.1.3](https://www.jetbrains.com/idea/)
+- [IntelliJ IDEA Ultimate 2016.1.3](https://www.jetbrains.com/idea/)
 - [Go 1.6.2](https://golang.org/)
 - [Go plugin (nightly, 0.11.1474)](https://plugins.jetbrains.com/plugin/5047)
 - [Markdown plugin (release, 2016.1.20160405)](https://plugins.jetbrains.com/plugin/7793)
