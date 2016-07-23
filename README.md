@@ -1,6 +1,7 @@
 # Docker image for IntelliJ IDEA Ultimate, Go and Go plugin
 
 [![CircleCI](https://circleci.com/gh/jamesmstone/docker-intellij.svg?style=svg)](https://circleci.com/gh/jamesmstone/docker-intellij)
+
 **Note:** This is a for from the original: dlsniper/[docker-intellij](https://github.com/dlsniper/docker-intellij). I made this fork as I was after a version that used the ultimate edition.
 
 The image contains the following software:
@@ -25,7 +26,7 @@ docker run -tdi \
            -v /tmp/.X11-unix:/tmp/.X11-unix \
            -v ${HOME}/.IdeaIC2016.1_docker:/home/developer/.IdeaIC2016.1 \
            -v ${GOPATH}:/home/developer/go \
-           dlsniper/docker-intellij
+           jamesmstone/docker-intellij
 ```
 
 The command will do the following:
@@ -57,7 +58,7 @@ docker run -tdi \
            -v /tmp/.X11-unix:/tmp/.X11-unix \
            -v ${PREF_DIR}:/home/developer/.IdeaIC2016.1 \
            -v ${GOPATH}:/home/developer/go \
-           dlsniper/docker-intellij
+           jamesmstone/docker-intellij
 ```
 
 ## Updating the container
@@ -65,7 +66,7 @@ docker run -tdi \
 To update the container, simply run:
 
 ```shell
-docker pull dlsniper/docker-intellij
+docker pull jamesmstone/docker-intellij
 ```
 
 Each of the plugins can be updated individually at any time, and other plugins
