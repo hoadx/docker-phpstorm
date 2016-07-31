@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/jamesmstone/docker-intellij.svg?style=svg)](https://circleci.com/gh/jamesmstone/docker-intellij)
 
-**Note:** This is a for from the original: dlsniper/[docker-intellij](https://github.com/dlsniper/docker-intellij). I made this fork as I was after a version that used the ultimate edition.
+> **Note:** This is a fork from the original: [dlsniper](https://github.com/dlsniper/)/[docker-intellij](https://github.com/dlsniper/docker-intellij). I made this fork as I was after a version that used the ultimate edition.
 
 The image contains the following software:
 
