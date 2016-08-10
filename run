@@ -27,4 +27,4 @@ if [ -d /home/developer/.IdeaIC2016.1 ]; then
     sudo chown developer:developer -R /home/developer/.IdeaIC2016.1
 fi
 
-exec /opt/intellij/bin/idea.sh
+exec /opt/intellij/bin/phpstrom.sh
