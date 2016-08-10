@@ -1,15 +1,12 @@
-# Docker image for IntelliJ IDEA Ultimate, Go and Go plugin
+# Docker image for PHPStorm
 
-[![CircleCI](https://circleci.com/gh/jamesmstone/docker-intellij.svg?style=svg)](https://circleci.com/gh/jamesmstone/docker-intellij)
+[![CircleCI](https://circleci.com/gh/jamesmstone/docker-phpstorm.svg?style=svg)](https://circleci.com/gh/jamesmstone/docker-phpstorm)
 
-> **Note:** This is a fork from the original: [dlsniper](https://github.com/dlsniper/)/[docker-intellij](https://github.com/dlsniper/docker-intellij). I made this fork as I was after a version that used the ultimate edition.
+> **Note:** This is a fork from: [jamesmstone](https://github.com/jamesmstone/)/[docker-intellij](https://github.com/jamesmstone/docker-intellij).
 
 The image contains the following software:
 
-- [IntelliJ IDEA Ultimate 2016.1.3](https://www.jetbrains.com/idea/)
-- [Go 1.6.2](https://golang.org/)
-- [Go plugin (nightly, 0.11.1474)](https://plugins.jetbrains.com/plugin/5047)
-- [Markdown plugin (release, 2016.1.20160405)](https://plugins.jetbrains.com/plugin/7793)
+- [IntelliJ PHP Storm 2016.1.3](https://www.jetbrains.com/phpstrom/)
 
 ## Running
 
@@ -25,8 +22,8 @@ docker run -tdi \
            -e DISPLAY=${DISPLAY} \
            -v /tmp/.X11-unix:/tmp/.X11-unix \
            -v ${HOME}/.IdeaIC2016.1_docker:/home/developer/.IdeaIC2016.1 \
-           -v ${GOPATH}:/home/developer/go \
-           jamesmstone/docker-intellij
+           -v ${GOPATH}:/home/developer/ \
+           jamesmstone/docker-phpstorm
 ```
 
 The command will do the following:
@@ -58,7 +55,7 @@ docker run -tdi \
            -v /tmp/.X11-unix:/tmp/.X11-unix \
            -v ${PREF_DIR}:/home/developer/.IdeaIC2016.1 \
            -v ${GOPATH}:/home/developer/go \
-           jamesmstone/docker-intellij
+           jamesmstone/docker-phpstorm
 ```
 
 ## Updating the container
@@ -72,7 +69,7 @@ docker pull jamesmstone/docker-intellij
 Each of the plugins can be updated individually at any time, and other plugins
 can be installed as well.
 
-However, to update IntelliJ IDEA itself, the docker image will need to be
+However, to update IntelliJ PHPStorm itself, the docker image will need to be
 updated.
 
 ## License
@@ -81,8 +78,8 @@ The MIT License (MIT)
 
 Copyright (c) 2016 Florin Patan
 
-If you want to read the full license text, please see the [LICENSE](https://github.com/dlsniper/docker-intellij/blob/master/LICENSE) file
+If you want to read the full license text, please see the [LICENSE](https://github.com/jamesmstone/docker-phpstorm/blob/master/LICENSE) file
 in this directory.
 
-IntelliJ IDEA and all the other plugins are or may be trademarks of their
+IntelliJ PHPStorm and all the other plugins are or may be trademarks of their
 respective owners / creators. Please read the individual licenses for them.

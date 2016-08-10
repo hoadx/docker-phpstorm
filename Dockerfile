@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER Florin Patan "florinpatan@gmail.com"
+MAINTAINER James Stone "jamesmstone@hotmail.com"
 
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
@@ -38,24 +38,13 @@ ADD ./run /usr/local/bin/intellij
 RUN chmod +x /usr/local/bin/intellij && \
     chown developer:developer -R /home/developer/.IdeaIC2016.1
 
-RUN echo 'Downloading IntelliJ IDEA' && \
-    wget https://download.jetbrains.com/idea/ideaIU-2016.2.tar.gz -O /tmp/intellij.tar.gz -q && \
+RUN echo 'Downloading IntelliJ PHPStorm' && \
+    wget https://download.jetbrains.com/webide/PhpStorm-2016.2.tar.gz -O /tmp/intellij.tar.gz -q && \
     echo 'Installing IntelliJ IDEA' && \
     mkdir -p /opt/intellij && \
     tar -xf /tmp/intellij.tar.gz --strip-components=1 -C /opt/intellij && \
     rm /tmp/intellij.tar.gz
 
-RUN echo 'Downloading Go 1.6.0' && \
-    wget https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz -O /tmp/go.tar.gz -q && \
-    echo 'Installing Go 1.6.0' && \
-    sudo tar -zxf /tmp/go.tar.gz -C /usr/local/ && \
-    rm -f /tmp/go.tar.gz
-
-RUN echo 'Installing Go plugin' && \
-    wget https://plugins.jetbrains.com/files/5047/26334/Go-0.11.1474.zip -O /home/developer/.IdeaIC2016.1/config/plugins/go.zip -q && \
-    cd /home/developer/.IdeaIC2016.1/config/plugins/ && \
-    unzip -q go.zip && \
-    rm go.zip
 
 RUN echo 'Installing Markdown plugin' && \
     wget https://plugins.jetbrains.com/files/7793/25156/markdown-2016.1.20160405.zip -O markdown.zip -q && \
@@ -66,7 +55,5 @@ RUN sudo chown developer:developer -R /home/developer
 
 USER developer
 ENV HOME /home/developer
-ENV GOPATH /home/developer/go
-ENV PATH $PATH:/home/developer/go/bin:/usr/local/go/bin
-WORKDIR /home/developer/go
+WORKDIR /home/developer/
 CMD /usr/local/bin/intellij
